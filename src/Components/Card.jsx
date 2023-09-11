@@ -7,10 +7,11 @@ export default function Card() {
 
   const options = {
     method: "GET",
-    url: `https://api.themoviedb.org/3/movie/popular?language=en-US`,
+    url: "https://api.themoviedb.org/3/movie/popular",
+    params: { language: "en-US" },
     headers: {
-      accept: "application/json",
-      Authorization: import.meta.env.REACT_APP_API_KEY,
+    accept: "application/json",
+    Authorization: import.meta.env.REACT_APP_API_KEY,
     },
   };
 
@@ -37,7 +38,7 @@ export default function Card() {
     
     return (
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 ">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 pt-10 mt-10 px-3">
           {movieData.map((movie, index) => (
             <div key={index}>
               <div className="card " data-testid="movie-card">

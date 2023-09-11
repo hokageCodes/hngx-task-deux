@@ -8,7 +8,7 @@ function App() {
     <div>
       <Header />
   
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen font-dmSans">
         <div className="h-full pb-40">
           <MovieList />
         </div>

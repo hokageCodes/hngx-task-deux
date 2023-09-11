@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
@@ -434,7 +436,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -484,7 +486,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -534,207 +536,258 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute {
+.absolute{
   position: absolute;
 }
 
-.relative {
+.relative{
   position: relative;
 }
 
-.bottom-0 {
+.bottom-0{
   bottom: 0px;
 }
 
-.top-0 {
-  top: 0px;
+.right-3{
+  right: 0.75rem;
 }
 
-.block {
-  display: block;
+.top-2{
+  top: 0.5rem;
 }
 
-.flex {
+.ml-4{
+  margin-left: 1rem;
+}
+
+.ml-5{
+  margin-left: 1.25rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.flex{
   display: flex;
 }
 
-.grid {
+.grid{
   display: grid;
 }
 
-.hidden {
+.hidden{
   display: none;
 }
 
-.h-40 {
+.h-40{
   height: 10rem;
 }
 
-.h-\[1440px\] {
-  height: 1440px;
+.h-\[350px\]{
+  height: 350px;
 }
 
-.h-full {
+.h-full{
   height: 100%;
 }
 
-.h-\[\] {
-  height: ;
-}
-
-.h-\[500\] {
-  height: 500;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[700px\] {
-  height: 700px;
-}
-
-.min-h-screen {
+.min-h-screen{
   min-height: 100vh;
 }
 
-.w-10 {
+.w-10{
   width: 2.5rem;
 }
 
-.w-full {
+.w-4{
+  width: 1rem;
+}
+
+.w-6{
+  width: 1.5rem;
+}
+
+.w-8{
+  width: 2rem;
+}
+
+.w-full{
   width: 100%;
 }
 
-.w-\[5\] {
-  width: 5;
-}
-
-.w-\[500px\] {
-  width: 500px;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[600px\] {
-  width: 600px;
-}
-
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
+.grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.items-center {
+.items-center{
   align-items: center;
 }
 
-.justify-between {
+.justify-between{
   justify-content: space-between;
 }
 
-.gap-5 {
+.gap-5{
   gap: 1.25rem;
 }
 
-.bg-\[url\(\'\.\/src\/assets\/poster\.png\'\)\] {
-  background-image: url('./src/assets/poster.png');
+.rounded-md{
+  border-radius: 0.375rem;
 }
 
-.bg-hero {
-  background-image: url('./src/assets/poster.png');
+.border{
+  border-width: 1px;
 }
 
-.bg-mobileHero {
+.bg-transparent{
+  background-color: transparent;
+}
+
+.bg-mobileHero{
   background-image: url('./src/assets/mobile-poster.png');
 }
 
-.bg-contain {
+.bg-contain{
   background-size: contain;
 }
 
-.bg-no-repeat {
+.bg-no-repeat{
   background-repeat: no-repeat;
 }
 
-.pb-10 {
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.pb-10{
   padding-bottom: 2.5rem;
 }
 
-.pb-40 {
+.pb-40{
   padding-bottom: 10rem;
 }
 
-.pt-96 {
+.pt-10{
+  padding-top: 2.5rem;
+}
+
+.pt-96{
   padding-top: 24rem;
 }
 
-.text-white {
+.font-dmSans{
+  font-family: DM Sans;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px) {
-  .md\:block {
-    display: block;
+.placeholder-white::-moz-placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-white::placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-opacity-50::-moz-placeholder{
+  --tw-placeholder-opacity: 0.5;
+}
+
+.placeholder-opacity-50::placeholder{
+  --tw-placeholder-opacity: 0.5;
+}
+
+@media (min-width: 768px){
+  .md\:flex{
+    display: flex;
   }
 
-  .md\:hidden {
+  .md\:hidden{
     display: none;
   }
 
-  .md\:h-\[1440px\] {
-    height: 1440px;
+  .md\:h-\[600px\]{
+    height: 600px;
   }
 
-  .md\:h-\[100px\] {
-    height: 100px;
+  .md\:w-10{
+    width: 2.5rem;
   }
 
-  .md\:h-\[1000px\] {
-    height: 1000px;
-  }
-
-  .md\:w-14 {
+  .md\:w-14{
     width: 3.5rem;
   }
 
-  .md\:w-full {
+  .md\:w-\[500px\]{
+    width: 500px;
+  }
+
+  .md\:w-full{
     width: 100%;
   }
 
-  .md\:grid-cols-5 {
+  .md\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .md\:bg-hero {
+  .md\:bg-hero{
     background-image: url('./src/assets/poster.png');
   }
 
-  .md\:bg-cover {
-    background-size: cover;
+  .md\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
-@media (min-width: 1536px) {
-  .\32xl\:bg-cover {
+@media (min-width: 1536px){
+  .\32xl\:h-\[1000px\]{
+    height: 1000px;
+  }
+
+  .\32xl\:bg-cover{
     background-size: cover;
   }
 }

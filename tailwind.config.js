@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         hero: "url('./src/assets/poster.png')",
-        mobileHero: "url('./src/assets/mobile-poster.png')"
+        mobileHero: "url('./src/assets/mobile-poster.png')",
+      },
+      fontFamily: {
+        dmSans: "DM Sans",
       },
     },
   },
