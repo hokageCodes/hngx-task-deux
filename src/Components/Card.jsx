@@ -37,27 +37,30 @@ export default function Card() {
     
     return (
       <div>
-        {/* <button onClick={handleClick}>CLICK ME</button> */}
-        {movieData.map((movie, index) => (
-          <div key={index}>
-                <div className="card" data-testid="movie-card">
-                   
-              <img
-                src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie Poster" className="" data-testid="movie-poster"
-              />
-                    <h1 className="" data-testid="movie-title">{movie.title}</h1>
-                    <h4 className="" data-testid="movie-release-date">USA, {movie.release_date}</h4>
-                    <div>
-                        <p>{movie.vote_average * 10}%</p> 
-                         <p>{movie.vote_average * 10 }%</p> 
-                    </div>
-                    
-                    
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 ">
+          {movieData.map((movie, index) => (
+            <div key={index}>
+              <div className="card " data-testid="movie-card">
+                <img
+                  src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt="Movie Poster"
+                  className="w-full"
+                  data-testid="movie-poster"
+                />
+                <h1 className="" data-testid="movie-title">
+                  {movie.title}
+                </h1>
+                <h4 className="" data-testid="movie-release-date">
+                  USA, {movie.release_date}
+                </h4>
+                <div className="flex justify-between items-center">
+                  <p>{movie.vote_average * 10}%</p>
+                  <p>{movie.vote_average * 10}%</p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-            
-          
+          ))}
+        </div>
       </div>
     );
 }

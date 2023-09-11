@@ -6,8 +6,8 @@ export default function MovieList() {
     return (
       
 
-        <div>
-            <Card />
+        <div className="">
+            <Card/>
         </div>
   )
 }
