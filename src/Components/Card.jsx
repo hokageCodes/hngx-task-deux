@@ -46,7 +46,12 @@ export default function Card() {
                 src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="Movie Poster" className="" data-testid="movie-poster"
               />
                     <h1 className="" data-testid="movie-title">{movie.title}</h1>
-                    <h4 className="" data-testid="movie-release-date">{movie.release_date}</h4>
+                    <h4 className="" data-testid="movie-release-date">USA, {movie.release_date}</h4>
+                    <div>
+                        <p>{movie.vote_average * 10}%</p> 
+                         <p>{movie.vote_average * 10 }%</p> 
+                    </div>
+                    
                     
             </div>
           </div>
