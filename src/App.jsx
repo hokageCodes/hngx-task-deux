@@ -1,15 +1,23 @@
-import Card from "./Components/Card";
+import Header from "./Components/Header";
 import MovieList from "./Components/MovieList";
+import Footer from "./Components/Footer";
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-green-500">Hello</h1>
-      <MovieList />
-      <Card />
-    </>
-  )
+    <div>
+      <Header />
+      <div className="relative min-h-screen">
+        <div className="h-full pb-40">
+          <MovieList />
+        </div>
+        <div className="absolute bottom-0 w-full h-40 pt-96 ">
+          <Footer />
+    </div>
+        
+      </div>
+    </div>
+  );
 }
 
 export default App

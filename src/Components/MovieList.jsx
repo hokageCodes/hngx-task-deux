@@ -1,4 +1,4 @@
-
+import Card from "./Card"
 
 export default function MovieList() {
 
@@ -7,7 +7,7 @@ export default function MovieList() {
       
 
         <div>
-            MovieList
+            <Card />
         </div>
   )
 }
