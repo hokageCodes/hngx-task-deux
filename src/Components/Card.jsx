@@ -10,8 +10,9 @@ export default function Card() {
     url: "https://api.themoviedb.org/3/movie/popular",
     params: { language: "en-US" },
     headers: {
-    accept: "application/json",
-    Authorization: import.meta.env.REACT_APP_API_KEY,
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYzcyZWUwZDRlYzAyZWVmNDNkY2UzNjBmN2I4NDllYyIsInN1YiI6IjY0ZmVmYmVkNmEyMjI3MDBjM2I1NTA4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IX4vZfe67rCcFewb07NpXRc7CVIE8o56Oj8xnQAm1nA",
     },
   };
 
