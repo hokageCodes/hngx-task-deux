@@ -39,7 +39,16 @@ export default function Card() {
     
     return (
       <div>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 pt-10 mt-10 px-3">
+        <div className="flex justify-between items-center p-3">
+          <h1 className="text-3xl font-bold tracking-wide md:mt-10">Featured Movie</h1>
+          <div className="flex items-center">
+            <h4 className="text-movieRed md:text-lg">See more</h4>
+            <img src="./src/assets/chevron-right.png" alt="chevron right" className="w-4" />
+          </div>
+          
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 pt-10  px-3">
           {movieData.map((movie, index) => (
             <div key={index}>
               <div className="card " data-testid="movie-card">
@@ -49,15 +58,36 @@ export default function Card() {
                   className="w-full"
                   data-testid="movie-poster"
                 />
-                <h1 className="" data-testid="movie-title">
-                  {movie.title}
-                </h1>
-                <h4 className="" data-testid="movie-release-date">
+                <h4
+                  className="text-xs text-gray-400 mt-2 font-bold"
+                  data-testid="movie-release-date"
+                >
                   USA, {movie.release_date}
                 </h4>
-                <div className="flex justify-between items-center">
-                  <p>{movie.vote_average * 10}%</p>
-                  <p>{movie.vote_average * 10}%</p>
+                <h1 className="font-bold mt-2" data-testid="movie-title">
+                  {movie.title}
+                </h1>
+
+                <div className="flex justify-between items-center mt-2">
+                  <div className="flex items-center">
+                    <img
+                      src="./src/assets/imdb.png"
+                      alt="imdb logo"
+                      className="w-6"
+                    />
+                    <p className="text-xs ml-2">
+                      {movie.vote_average * 10} / 100
+                    </p>
+                  </div>
+
+                  <div className="flex items-center">
+                    <img
+                      src="./src/assets/tomato.png"
+                      alt="rotten tomatoes logo"
+                      className="w-4"
+                    />
+                    <p className="text-xs ml-2 ">{movie.vote_average * 10}%</p>
+                  </div>
                 </div>
               </div>
             </div>
