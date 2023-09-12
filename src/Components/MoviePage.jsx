@@ -43,12 +43,23 @@ export default function MoviePage() {
           <div className=" ">
             <p>side bar</p>
           </div>
-          <div className="">
-            <img
-              src={`http://image.tmdb.org/t/p/w500${movieInfo.backdrop_path}`}
-              alt="movie trailer"
-              className=""
-            />
+          <div className="p-3 md:p-14 2xl:p-10 overflow-x-hidden">
+            <div className="relative">
+              <img
+                src={`http://image.tmdb.org/t/p/w500${movieInfo.backdrop_path}`}
+                alt="movie trailer"
+                className="w-full rounded-xl overflow-hidden"
+              />
+              <div className="centered">
+                <img
+                  src="/src/assets/white-play.png"
+                  alt="play button"
+                  className=" w-20 md:w-full bg-gray-400 bg-opacity-25 rounded-full p-3"
+                />
+                <p className="text-white text-center mt-2 text-lg">Watch Trailer</p>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 ">
               <div>
                 <div>
@@ -57,15 +68,14 @@ export default function MoviePage() {
                     {movieInfo.release_date}
                   </p>
                   <p data-testid="movie-runtime">{movieInfo.runtime}</p>
-                                     
-                    {movieInfo.genres.slice(0, 2).map((genre, index) => (
-                  <div key={index}>
-                    <span> {genre.name}</span>
-                  </div>
-                ))}                  
+
+                  {movieInfo.genres.slice(0, 2).map((genre, index) => (
+                    <div key={index}>
+                      <span> {genre.name}</span>
+                    </div>
+                  ))}
                 </div>
                 <p data-testid="movie-overview">{movieInfo.overview}</p>
-                
               </div>
               <div>
                 <p>see show times</p>
