@@ -1,9 +1,31 @@
 export default function Footer() {
   return (
-      <div className="pb-10">
-          <h1>Footer
-          </h1> 
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis temporibus ducimus quidem quos pariatur unde corrupti incidunt aliquam ipsa. Corrupti molestiae odit delectus dolores, eveniet officia impedit assumenda provident obcaecati autem voluptates beatae fuga ullam, totam nam. Ut temporibus nemo quae numquam, tempora cum quasi necessitatibus explicabo perspiciatis vero quaerat totam libero maxime aspernatur enim beatae ad sint asperiores ipsa corporis. Ratione voluptatibus necessitatibus non esse! Quis veniam at tempora repellat nam facere eum. Voluptatem alias at aspernatur repellendus asperiores.</p>
+    <div className="pb-10 text-center">
+      <div className="flex justify-center items-center">
+        <img src="./src/assets/facebook.png" alt="facebook logo" />
+        <img
+          src="./src/assets/instagram.png"
+          alt="facebook logo"
+          className="ml-2"
+        />
+        <img
+          src="./src/assets/twitter.png"
+          alt="facebook logo"
+          className="ml-2"
+        />
+        <img
+          src="./src/assets/youtube.png"
+          alt="facebook logo"
+          className="ml-2"
+        />
       </div>
-  )
+      <div className="flex justify-center items-center mt-5">
+        <h5>Conditions of Use</h5>
+        <h5 className="ml-5">Privacy Policy</h5>
+        <h5 className="ml-5">Press Room</h5>
+      </div>
+
+      <p className="mt-5 text-gray-400">&copy; 2023 MovieBox by Ameley Kwei-Armah</p>
+    </div>
+  );
 }
