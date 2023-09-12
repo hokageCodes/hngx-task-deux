@@ -1,4 +1,4 @@
-import Header from "./Components/Header";
+
 import MovieList from "./Components/MovieList";
 import Footer from "./Components/Footer";
 import MoviePage from "./Components/MoviePage";
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="font-dmSans">
-      <Header />
+
      
         
    
@@ -17,7 +17,7 @@ function App() {
           
           <Routes>   
            <Route path={"/"} element={<MovieList /> } />
-            <Route path={"/"} element={<MoviePage />} />
+            <Route path={"/movie/:movieId"} element={<MoviePage />} />
           </Routes>   
           </div>
    

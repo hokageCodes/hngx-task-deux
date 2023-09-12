@@ -1,5 +1,5 @@
 import Card from "./Card"
-
+import Header from "./Header"
 export default function MovieList() {
 
 
@@ -7,6 +7,7 @@ export default function MovieList() {
       
 
         <div className="">
+           <Header />
             <Card/>
         </div>
   )

@@ -2,20 +2,20 @@ export default function Footer() {
   return (
     <div className="pb-10 text-center">
       <div className="flex justify-center items-center">
-        <img src="./src/assets/facebook.png" alt="facebook logo" />
+        <img src="/src/assets/facebook.png" alt="facebook logo" />
         <img
-          src="./src/assets/instagram.png"
-          alt="facebook logo"
+          src="/src/assets/instagram.png"
+          alt="instagram logo"
           className="ml-2"
         />
         <img
-          src="./src/assets/twitter.png"
-          alt="facebook logo"
+          src="/src/assets/twitter.png"
+          alt="twitter logo"
           className="ml-2"
         />
         <img
-          src="./src/assets/youtube.png"
-          alt="facebook logo"
+          src="/src/assets/youtube.png"
+          alt="youtube logo"
           className="ml-2"
         />
       </div>

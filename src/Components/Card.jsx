@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 import { useEffect, useState } from "react";
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 export default function Card() {
   const [movieData, setMovieData] = useState([]);
@@ -165,8 +166,12 @@ export default function Card() {
         {movieData &&
           movieData.slice(0, 10).map((movie, index) => (
             <div key={index}>
+              
               <div className="card" data-testid="movie-card">
                 <div className="relative">
+                  <Link to={`/movie/${movie.id}`}>
+                    
+                  
                   <img
                     src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     alt="Movie Poster"
@@ -186,7 +191,8 @@ export default function Card() {
                         className="w-6 bg-favorite bg-opacity-50 rounded-full p-1"
                       />
                     </button>
-                  </div>
+                    </div>
+                    </Link>
                 </div>
 
                 <h4
