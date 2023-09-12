@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function Card() {
   const [movieData, setMovieData] = useState([]);
-  const [liked, setLiked] = useState(true)
+  const [liked, setLiked] = useState(false)
 
   const options = {
     method: "GET",
@@ -33,11 +33,11 @@ export default function Card() {
     getMovie();
   }, []);
 
-//     const handleClick = (e) => {
-//         e.preventDefault()
-//         getMovie()
-//   } 
-    
+  // useEffect(() => {
+  //   setLiked(liked => liked )
+  // },[])
+
+
     
     return (
       <div>
@@ -56,27 +56,35 @@ export default function Card() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-5 pt-10  px-3">
-          {movieData.slice(0, 10).map((movie, index) => (
+          {movieData && movieData.slice(0, 10).map((movie, index) => (
             <div key={index}>
               <div className="card " data-testid="movie-card">
 
 
                 <div className="relative">
-                  <button>
+                
                     <img
                   src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt="Movie Poster"
                   className="w-full"
                   data-testid="movie-poster"
-                  /></button>
+                  />
 
-                  {liked ? (
+                  {liked === index ? (
                     <div className="absolute right-0 top-0 p-2">
-                    <img onClick={() => setLiked(false)} src="./src/assets/fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
+                      <button>
+                      <img onClick={() => setLiked(index)} src="./src/assets/red-fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
+
+                      </button>
+                    
                     </div>) : (
                       <div className="absolute right-0 top-0 p-2">
                         <button>
-                          <img onClick={() => setLiked(true)} src="./src/assets/red-fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
+
+                    <img onClick={() => setLiked(index)} src="./src/assets/fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
+                          
+
+
                         </button>
                     </div>
                   )}
