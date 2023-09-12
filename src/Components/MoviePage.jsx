@@ -56,22 +56,34 @@ export default function MoviePage() {
                   alt="play button"
                   className=" w-20 md:w-full bg-gray-400 bg-opacity-25 rounded-full p-3"
                 />
-                <p className="text-white text-center mt-2 text-lg">Watch Trailer</p>
+                <p className="text-white text-center mt-2 text-lg">
+                  Watch Trailer
+                </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 ">
+            <div className="grid grid-cols-1 md:grid-cols-[70%_30%] gap-4 ">
               <div>
-                <div>
-                  <h2 data-testid="movie-title">{movieInfo.original_title}</h2>
-                  <p data-testid="movie-release-date">
+                <div className="block md:flex items-center mt-5 ">
+                  <h2 data-testid="movie-title" className="text-2xl tracking-wide">
+                    {movieInfo.title}
+                  </h2>
+                  <span className="hidden md:flex md:ml-3">•</span>
+                  <p data-testid="movie-release-date" className="md:ml-5 text-2xl">
                     {movieInfo.release_date}
                   </p>
-                  <p data-testid="movie-runtime">{movieInfo.runtime}</p>
+                  <span className="hidden md:flex ml-3 mr-3">•</span>
+                  <p data-testid="movie-runtime" className="text-2xl">{movieInfo.runtime}</p>
+                  <span className="hidden md:flex md:ml-3">•</span>
 
                   {movieInfo.genres.slice(0, 2).map((genre, index) => (
                     <div key={index}>
-                      <span> {genre.name}</span>
+                      <div className="">
+                        <p className="md:ml-2 w-max px-2  text-sm border border-movieRed rounded-full md:px-2 border-opacity-25 md:text-base text-movieRed my-2">
+                      
+                          {genre.name}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>

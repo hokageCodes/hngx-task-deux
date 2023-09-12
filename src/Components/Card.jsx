@@ -178,7 +178,7 @@ export default function Card() {
                     className="w-full"
                     data-testid="movie-poster"
                   />
-
+              </Link>
                   <div className="absolute right-0 top-0 p-2">
                     <button onClick={() => toggleLike(index)}>
                       <img
@@ -188,11 +188,11 @@ export default function Card() {
                             : "./src/assets/fave.png"
                         }
                         alt="like icon"
-                        className="w-6 bg-favorite bg-opacity-50 rounded-full p-1"
+                        className="w-6 bg-favorite bg-opacity-50 rounded-full p-1 z-20"
                       />
                     </button>
                     </div>
-                    </Link>
+                   
                 </div>
 
                 <h4
