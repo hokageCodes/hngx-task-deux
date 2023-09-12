@@ -1,9 +1,11 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import { useEffect, useState } from "react";
 import axios from 'axios'
 
 export default function Card() {
   const [movieData, setMovieData] = useState([]);
+  const [liked, setLiked] = useState(true)
 
   const options = {
     method: "GET",
@@ -40,24 +42,48 @@ export default function Card() {
     return (
       <div>
         <div className="flex justify-between items-center p-3">
-          <h1 className="text-3xl font-bold tracking-wide md:mt-10">Featured Movie</h1>
+          <h1 className="text-3xl font-bold tracking-wide md:mt-10">
+            Featured Movie
+          </h1>
           <div className="flex items-center">
             <h4 className="text-movieRed md:text-lg">See more</h4>
-            <img src="./src/assets/chevron-right.png" alt="chevron right" className="w-4" />
+            <img
+              src="./src/assets/chevron-right.png"
+              alt="chevron right"
+              className="w-4"
+            />
           </div>
-          
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-5 gap-5 pt-10  px-3">
-          {movieData.map((movie, index) => (
+          {movieData.slice(0, 10).map((movie, index) => (
             <div key={index}>
               <div className="card " data-testid="movie-card">
-                <img
+
+
+                <div className="relative">
+                  <button>
+                    <img
                   src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt="Movie Poster"
                   className="w-full"
                   data-testid="movie-poster"
-                />
+                  /></button>
+
+                  {liked ? (
+                    <div className="absolute right-0 top-0 p-2">
+                    <img onClick={() => setLiked(false)} src="./src/assets/fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
+                    </div>) : (
+                      <div className="absolute right-0 top-0 p-2">
+                        <button>
+                          <img onClick={() => setLiked(true)} src="./src/assets/red-fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
+                        </button>
+                    </div>
+                  )}
+                  
+                  
+                </div>
+              
                 <h4
                   className="text-xs text-gray-400 mt-2 font-bold"
                   data-testid="movie-release-date"

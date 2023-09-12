@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         movieRed: "#BE123C",
+        favorite: "#F3F4F6",
       },
     },
   },
