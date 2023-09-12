@@ -55,77 +55,80 @@ export default function Card() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 pt-10  px-3">
-          {movieData && movieData.slice(0, 10).map((movie, index) => (
-            <div key={index}>
-              <div className="card " data-testid="movie-card">
-
-
-                <div className="relative">
-                
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 pt-10  px-3 ">
+          {movieData &&
+            movieData.slice(0, 10).map((movie, index) => (
+              <div key={index}>
+                <div className="card  " data-testid="movie-card">
+                  <div className="relative">
                     <img
-                  src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  alt="Movie Poster"
-                  className="w-full"
-                  data-testid="movie-poster"
-                  />
+                      src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      alt="Movie Poster"
+                      className="w-full"
+                      data-testid="movie-poster"
+                    />
 
-                  {liked === index ? (
-                    <div className="absolute right-0 top-0 p-2">
-                      <button>
-                      <img onClick={() => setLiked(index)} src="./src/assets/red-fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
-
-                      </button>
-                    
-                    </div>) : (
+                    {liked === index ? (
                       <div className="absolute right-0 top-0 p-2">
                         <button>
-
-                    <img onClick={() => setLiked(index)} src="./src/assets/fave.png" alt="like icon" className="w-6 bg-favorite bg-opacity-50 rounded-full p-1" />
-                          
-
-
+                          <img
+                            onClick={() => setLiked(index)}
+                            src="./src/assets/red-fave.png"
+                            alt="like icon"
+                            className="w-6 bg-favorite bg-opacity-50 rounded-full p-1"
+                          />
                         </button>
-                    </div>
-                  )}
-                  
-                  
-                </div>
-              
-                <h4
-                  className="text-xs text-gray-400 mt-2 font-bold"
-                  data-testid="movie-release-date"
-                >
-                  USA, {movie.release_date}
-                </h4>
-                <h1 className="font-bold mt-2" data-testid="movie-title">
-                  {movie.title}
-                </h1>
-
-                <div className="flex justify-between items-center mt-2">
-                  <div className="flex items-center">
-                    <img
-                      src="./src/assets/imdb.png"
-                      alt="imdb logo"
-                      className="w-6"
-                    />
-                    <p className="text-xs ml-2">
-                      {movie.vote_average * 10} / 100
-                    </p>
+                      </div>
+                    ) : (
+                      <div className="absolute right-0 top-0 p-2">
+                        <button>
+                          <img
+                            onClick={() => setLiked(index)}
+                            src="./src/assets/fave.png"
+                            alt="like icon"
+                            className="w-6 bg-favorite bg-opacity-50 rounded-full p-1"
+                          />
+                        </button>
+                      </div>
+                    )}
                   </div>
 
-                  <div className="flex items-center">
-                    <img
-                      src="./src/assets/tomato.png"
-                      alt="rotten tomatoes logo"
-                      className="w-4"
-                    />
-                    <p className="text-xs ml-2 ">{movie.vote_average * 10}%</p>
+                  <h4
+                    className="text-xs text-gray-400 mt-2 font-bold"
+                    data-testid="movie-release-date"
+                  >
+                    USA, {movie.release_date}
+                  </h4>
+                  <h1 className="font-bold mt-2" data-testid="movie-title">
+                    {movie.title}
+                  </h1>
+
+                  <div className="flex justify-between items-center mt-2  ">
+                    <div className="flex items-center">
+                      <img
+                        src="./src/assets/imdb.png"
+                        alt="imdb logo"
+                        className="w-6"
+                      />
+                      <p className="text-xs ml-2">
+                        {movie.vote_average * 10} / 100
+                      </p>
+                    </div>
+
+                    <div className="flex items-center">
+                      <img
+                        src="./src/assets/tomato.png"
+                        alt="rotten tomatoes logo"
+                        className="w-4"
+                      />
+                      <p className="text-xs ml-2 ">
+                        {movie.vote_average * 10}%
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     );
