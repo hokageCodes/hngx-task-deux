@@ -47,7 +47,6 @@ export default function Card() {
     return genreNames.join(", ");
   }
 
-  // Function to handle liking/unliking a movie
 
   const toggleLike = (index) => {
     setLikedMovies((prevLikedMovies) =>
