@@ -9,7 +9,7 @@ module.exports = {
         mobileHero: "url('./src/assets/mobile-poster.png')",
       },
       fontFamily: {
-        dmSans: "DM Sans",
+        dmSans: ["DM Sans"],
       },
       colors: {
         movieRed: "#BE123C",

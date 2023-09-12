@@ -6,8 +6,9 @@ export default function Search() {
       <div className="relative">
         <input
           type="text"
-          name="search"
-          id="search"
+          name="query"
+          id="query"
+       
           placeholder="What do you want to watch?"
           className="hidden md:flex border border-2-grey bg-transparent placeholder-white text-xs md:text-base rounded-md md:w-[500px] placeholder-opacity-50 px-3 py-1"
         />
