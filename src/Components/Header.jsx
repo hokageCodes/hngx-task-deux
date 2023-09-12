@@ -40,6 +40,7 @@ export default function Header() {
           </div>
           <Search />
           <div className="flex items-center ">
+            <div></div>
             <h1 className="text-sm">Sign In</h1>
             <button>
               <img
@@ -49,6 +50,37 @@ export default function Header() {
               />
             </button>
           </div>
+        </div>
+
+        <div className=" w-56 md:w-96 p-2 text-white ">
+          <h1 className=" text-4xl md:text-6xl">
+            John Wick 3 : Parabellum
+          </h1>
+
+          <div className="flex justify-between items-center mt-2 ">
+            <div className="flex items-center">
+              <img
+                src="./src/assets/imdb.png"
+                alt="imdb logo"
+                className="w-6"
+              />
+              <p className="text-xs ml-2">86 / 100</p>
+            </div>
+
+            <div className="flex items-center">
+              <img
+                src="./src/assets/tomato.png"
+                alt="rotten tomatoes logo"
+                className="w-4"
+              />
+              <p className="text-xs ml-2 ">97%</p>
+            </div>
+          </div>
+          <p className="mt-5 text-xs md:text-base">
+            John Wick is on the run after killing a member of the international
+            assassins guild, and with a $14 million price tag on his head, he
+            is the target of hit men and women everywhere.
+          </p>
         </div>
       </div>
     </div>
