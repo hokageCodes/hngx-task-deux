@@ -1,9 +1,10 @@
 import Search from "./Search";
-import tvImage from "./assets/tv.png";
-import redMenuImage from "./assets/red-menu.png";
-import imdbImage from "./assets/imdb.png";
-import tomatoImage from "./assets/tomato.png";
-import playImage from "./assets/play.png";
+import tvImage from "./src/assets/tv.png";
+import redMenuImage from "./src/assets/red-menu.png";
+import imdbImage from "./src/assets/imdb.png";
+import tomatoImage from "./src/assets/tomato.png";
+import playImage from "./src/assets/play.png";
+
 
 
 export default function Header() {
