@@ -24,7 +24,7 @@ export default function MoviePage() {
       const response = await axios.request(details);
       setMovieInfo(response.data);
       setLoading(false);
-      console.log(response.data);
+      console.log(response.data.release_dates.results[45].release_dates);
     } catch (error) {
       console.error(error);
       setLoading(false);
@@ -35,17 +35,16 @@ export default function MoviePage() {
     movieDetails();
   }, [movieId]);
 
- const formatDateToUTC = (dateString) => {
-   const date = new Date(dateString);
-   const options = {
-     year: "numeric",
-     month: "long",
-     day: "numeric",
-     timeZone: "UTC",
-   };
-   return date.toLocaleDateString("en-US", options);
- };
-
+  const formatDateToUTC = (dateString) => {
+    const date = new Date(dateString);
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC",
+    };
+    return date.toLocaleDateString("en-US", options);
+  };
 
   return (
     <div>
@@ -91,6 +90,15 @@ export default function MoviePage() {
                   >
                     {formatDateToUTC(movieInfo.release_date)}
                   </p>
+                  <span className="hidden md:flex ml-3 mr-3">•</span>
+
+                  {movieInfo.release_dates.results[45].release_dates
+                    .slice(0, 1)
+                    .map((rating, i) => (
+                      <div key={i}>
+                        <p className="text-2xl ">{rating.certification}</p>
+                      </div>
+                    ))}
                   <span className="hidden md:flex ml-3 mr-3">•</span>
                   <p data-testid="movie-runtime" className="text-2xl">
                     {movieInfo.runtime}
