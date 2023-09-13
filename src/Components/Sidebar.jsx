@@ -4,10 +4,12 @@ export default function Sidebar() {
   return (
     <div>
       <div className="flex justify-between md:block px-8 py-3 font-bold border border-gray-400  rounded-br-3xl rounded-tr-2xl h-full w-max">
-        <div className="flex items-center mb-10 pt-4">
+              <Link to={"/"}>
+              <div className="flex items-center mb-10 pt-4">
           <img src="/src/assets/tv.png" alt="logo" className="w-10" />
           <h1 className="ml-2"> Movie Box</h1>
-        </div>
+                  </div>
+              </Link>
         <div className="flex md:block text-gray-400">
           <Link to={"/"}>
             <div className="items-center flex mb-10">

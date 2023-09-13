@@ -7,7 +7,8 @@ export default function MoviePage() {
   const { movieId } = useParams();
   const [movieInfo, setMovieInfo] = useState({});
   const [loading, setLoading] = useState(true);
-  const [usCertification, setUsCertification] = useState(""); // State to store US certificatio
+    const [usCertification, setUsCertification] = useState("");
+    const [formattedRuntime, setFormattedRuntime] = useState("");
 
   const details = {
     method: "GET",
@@ -27,18 +28,23 @@ export default function MoviePage() {
       setMovieInfo(response.data);
       setLoading(false);
       console.log(response.data.release_dates.results);
-      // Find the release date entry for the United States (US)
-      const desiredCountryCode = "US"; // Replace with your desired country code
+     
+      const desiredCountryCode = "US"; 
       const releaseDateEntry = response.data.release_dates.results.find(
         (entry) => entry.iso_3166_1 === desiredCountryCode
       );
 
       if (releaseDateEntry) {
-        // Access and set the US certification
+   
         const usCertification =
           releaseDateEntry.release_dates[0]?.certification;
         setUsCertification(usCertification);
       }
+        
+         const runtimeInMinutes = response.data.runtime;
+         const hours = Math.floor(runtimeInMinutes / 60);
+         const minutes = runtimeInMinutes % 60;
+         setFormattedRuntime(`${hours}h ${minutes}min`);
     } catch (error) {
       console.error(error);
       setLoading(false);
@@ -111,7 +117,7 @@ export default function MoviePage() {
                   )}
                   <span className="hidden md:flex ml-3 mr-3">•</span>
                   <p data-testid="movie-runtime" className="text-2xl">
-                    {movieInfo.runtime}
+                    {formattedRuntime && <p>{formattedRuntime}</p>}
                   </p>
                   <span className="hidden md:flex md:ml-3">•</span>
 

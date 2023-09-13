@@ -12,8 +12,8 @@ function App() {
      
         
    
-      <div className="relative min-h-screen ">
-          <div className="h-full pb-32">
+      <div className="">
+          <div className="">
           
           <Routes>   
            <Route path={"/"} element={<MovieList /> } />
@@ -21,7 +21,7 @@ function App() {
           </Routes>   
           </div>
    
-        <div className="absolute bottom-0 w-full h-28 pt-96 ">
+        <div className=" ">
           <Footer />
         </div>
       </div>

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="pb-10 text-center">
+    <div className="pt-20 text-center">
       <div className="flex justify-center items-center">
         <img src="/src/assets/facebook.png" alt="facebook logo" />
         <img
