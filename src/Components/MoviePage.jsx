@@ -208,8 +208,10 @@ export default function MoviePage() {
                 <button className="flex items-center justify-center bg-movieRed bg-opacity-25 rounded-lg px-3 py-3 w-full border border-movieRed">
                   <img src="/src/assets/list.png" alt="list" className="w-7" />
                   <p className="ml-3 text-black">More watch options</p>
-                </button>
-              </div>
+                                  </button>
+                                  <img src="/src/assets/group52.png" alt="" className="mt-4 w-full"/>
+                              </div>
+                              
             </div>
           </div>
         </div>
