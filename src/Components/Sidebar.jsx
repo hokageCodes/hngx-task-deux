@@ -6,7 +6,7 @@ export default function Sidebar() {
       <div className="flex justify-between items-center md:block px-8 py-3 font-bold md:border md:border-gray-400  md:rounded-br-3xl rounded-tr-2xl h-full w-max">
               <Link to={"/"}>
               <div className="flex items-center md:mb-10 md:pt-4">
-          <img src="/src/assets/tv.png" alt="logo" className="w-10" />
+          <img src="../assets/tv.png" alt="logo" className="w-10" />
           <h1 className="ml-2"> Movie Box</h1>
                   </div>
               </Link>
@@ -14,7 +14,7 @@ export default function Sidebar() {
           <Link to={"/"}>
             <div className="items-center flex md:mb-10">
               <img
-                src="/src/assets/home.png"
+                src="../assets/home.png"
                 alt="home"
                 className="w-7 ml-3 md:ml-0 md:w-10"
               />
@@ -24,7 +24,7 @@ export default function Sidebar() {
           <Link to={"/"}>
             <div className="items-center flex md:mb-10">
               <img
-                src="/src/assets/movie.png"
+                src="../assets/movie.png"
                 alt="home"
                 className="w-6 ml-3 md:ml-1 md:w-8"
               />
@@ -33,7 +33,7 @@ export default function Sidebar() {
           </Link>
          <Link to={"/"}> <div className="items-center flex md:mb-10">
             <img
-              src="/src/assets/show.png"
+              src="../assets/show.png"
               alt="home"
               className="w-7 ml-3 md:ml-0 md:w-10"
             />
@@ -41,7 +41,7 @@ export default function Sidebar() {
           </div></Link>
          <Link to={"/"}> <div className="items-center flex md:mb-10">
             <img
-              src="/src/assets/calendar.png"
+              src="../assets/calendar.png"
               alt="home"
               className="w-7 ml-3 md:ml-0 md:w-10"
             />
@@ -59,7 +59,7 @@ export default function Sidebar() {
 
          <Link to={"/"}> <div className="items-center flex">
             <img
-              src="/src/assets/logout.png"
+              src="../assets/logout.png"
               alt="home"
               className="w-7 ml-3 md:ml-0 md:w-10"
             />

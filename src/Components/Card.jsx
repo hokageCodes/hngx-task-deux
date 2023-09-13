@@ -156,7 +156,7 @@ export default function Card() {
           <div className="flex items-center">
             <h4 className="text-movieRed md:text-lg">See more</h4>
             <img
-              src="./assets/chevron-right.png"
+              src="../assets/chevron-right.png"
               alt="chevron right"
               className="w-4"
             />
@@ -183,8 +183,8 @@ export default function Card() {
                       <img
                         src={
                           likedMovies.includes(index)
-                            ? "./assets/red-fave.png"
-                            : "./assets/fave.png"
+                            ? "../assets/red-fave.png"
+                            : "../assets/fave.png"
                         }
                         alt="like icon"
                         className="w-6 bg-favorite bg-opacity-50 rounded-full p-1 z-20"
@@ -206,7 +206,7 @@ export default function Card() {
                 <div className="flex justify-between items-center mt-2">
                   <div className="flex items-center">
                     <img
-                      src="./assets/imdb.png"
+                      src="../assets/imdb.png"
                       alt="imdb logo"
                       className="w-6"
                     />
@@ -217,7 +217,7 @@ export default function Card() {
 
                   <div className="flex items-center">
                     <img
-                      src="./assets/tomato.png"
+                      src="../assets/tomato.png"
                       alt="rotten tomatoes logo"
                       className="w-4"
                     />
