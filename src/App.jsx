@@ -2,6 +2,7 @@
 import MovieList from "./Components/MovieList";
 import Footer from "./Components/Footer";
 import MoviePage from "./Components/MoviePage";
+import SearchResultsPage from "./Components/SearchResultsPage";
 import {Routes, Route} from "react-router-dom"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Routes>   
            <Route path={"/"} element={<MovieList /> } />
             <Route path={"/movie/:movieId"} element={<MoviePage />} />
+            <Route path={"/search-results"} element={<SearchResultsPage />} />
           </Routes>   
           </div>
    
