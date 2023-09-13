@@ -12,7 +12,7 @@ export default function Card() {
 
   const options = {
     method: "GET",
-    url: "https://api.themoviedb.org/3/movie/popular",
+    url: "https://api.themoviedb.org/3/movie/top_rated",
     params: { language: "en-US" },
     headers: {
       accept: "application/json",

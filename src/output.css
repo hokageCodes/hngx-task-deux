@@ -617,6 +617,14 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .block{
   display: block;
 }
@@ -684,6 +692,10 @@ video {
 .w-max{
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-7{
+  width: 1.75rem;
 }
 
 .grid-cols-1{
