@@ -27,7 +27,7 @@ export default function MoviePage() {
       const response = await axios.request(details);
       setMovieInfo(response.data);
       setLoading(false);
-      console.log(response.data.release_dates.results);
+    
      
       const desiredCountryCode = "US"; 
       const releaseDateEntry = response.data.release_dates.results.find(
@@ -97,26 +97,29 @@ export default function MoviePage() {
                 <div className="block md:flex items-center mt-5 ">
                   <h2
                     data-testid="movie-title"
-                    className="text-2xl tracking-wide"
+                    className="text-1xl 2xl:text-2xl tracking-wide"
                   >
                     {movieInfo.title}
                   </h2>
                   <span className="hidden md:flex md:ml-3">•</span>
                   <p
                     data-testid="movie-release-date"
-                    className="md:ml-5 text-2xl"
+                    className="md:ml-5 text-1xl 2xl:text-2xl"
                   >
                     {formatDateToUTC(movieInfo.release_date)}
                   </p>
                   <span className="hidden md:flex ml-3 mr-3">•</span>
 
                   {usCertification ? (
-                    <p className="text-2xl">{usCertification}</p>
+                    <p className="text-1xl 2xl:text-2xl">{usCertification}</p>
                   ) : (
                     <p>US Certification not available</p>
                   )}
                   <span className="hidden md:flex ml-3 mr-3">•</span>
-                  <p data-testid="movie-runtime" className="text-2xl">
+                  <p
+                    data-testid="movie-runtime"
+                    className="text-1xl 2xl:text-2xl"
+                  >
                     {formattedRuntime && <p>{formattedRuntime}</p>}
                   </p>
                   <span className="hidden md:flex md:ml-3">•</span>
@@ -158,18 +161,26 @@ export default function MoviePage() {
                 </div>
                 <div className="block md:flex items-center mt-2">
                   <h1 className=" text-xl">Writer:</h1>
-                  {movieInfo.credits.crew
-                    .filter(
-                      (person) => person.known_for_department === "Writing"
-                    )
-                    .slice(0, 1)
-                    .map((writer, i) => (
-                      <div key={i}>
-                        <p className="text-movieRed text-lg md:ml-2">
-                          {writer.name}
-                        </p>
-                      </div>
-                    ))}
+                  {movieInfo.credits.crew.some(
+                    (person) => person.known_for_department === "Writing"
+                  ) ? (
+                    movieInfo.credits.crew
+                      .filter(
+                        (person) => person.known_for_department === "Writing"
+                      )
+                      .slice(0, 1)
+                      .map((writer, i) => (
+                        <div key={i}>
+                          <p className="text-movieRed text-lg md:ml-2">
+                            {writer.name}
+                          </p>
+                        </div>
+                      ))
+                  ) : (
+                    <div>
+                      <p className="text-movieRed text-lg md:ml-2">Unknown</p>
+                    </div>
+                  )}
                 </div>
                 <div className="block md:flex items-center mt-2">
                   <div>
