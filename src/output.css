@@ -1015,6 +1015,10 @@ video {
     margin-top: 1.5rem;
   }
 
+  .md\:mb-10{
+    margin-bottom: 2.5rem;
+  }
+
   .md\:block{
     display: block;
   }
@@ -1067,6 +1071,19 @@ video {
     grid-template-columns: 70% 30%;
   }
 
+  .md\:rounded-br-3xl{
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .md\:border{
+    border-width: 1px;
+  }
+
+  .md\:border-gray-400{
+    --tw-border-opacity: 1;
+    border-color: rgb(156 163 175 / var(--tw-border-opacity));
+  }
+
   .md\:bg-hero{
     background-image: url('/src/assets/poster.png');
   }
@@ -1087,6 +1104,10 @@ video {
   .md\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .md\:pt-4{
+    padding-top: 1rem;
   }
 
   .md\:text-5xl{
