@@ -1,5 +1,9 @@
-
 import Search from "./Search";
+import tvImage from "./assets/tv.png";
+import redMenuImage from "./assets/red-menu.png";
+import imdbImage from "./assets/imdb.png";
+import tomatoImage from "./assets/tomato.png";
+import playImage from "./assets/play.png";
 
 
 export default function Header() {
@@ -11,7 +15,7 @@ export default function Header() {
         <div className="hidden md:flex justify-between items-center text-white px-4 md:px-6 py-3">
           <div className="flex items-center">
             <img
-              src="./src/assets/tv.png"
+              src={tvImage}
               alt="logo"
               className=" w-10 md:w-14"
             />
@@ -22,7 +26,7 @@ export default function Header() {
             <h1 className="text-sm">Sign In</h1>
             <button>
               <img
-                src="./src/assets/red-menu.png"
+                src={redMenuImage}
                 alt="menu"
                 className="w-6 md:w-10 ml-4"
               />
@@ -35,7 +39,7 @@ export default function Header() {
         <div className="flex justify-between items-center text-white px-4 py-3 md:hidden">
           <div className="flex items-center">
             <img
-              src="./src/assets/tv.png"
+              src={tvImage}
               alt="logo"
               className=" w-8 md:w-14"
             />
@@ -47,7 +51,7 @@ export default function Header() {
             <h1 className="text-sm">Sign In</h1>
             <button>
               <img
-                src="./src/assets/red-menu.png"
+                src={redMenuImage}
                 alt="menu"
                 className="w-6 md:w-10 ml-4"
               />
@@ -64,7 +68,7 @@ export default function Header() {
           <div className="flex items-center mt-2 ">
             <div className="flex items-center">
               <img
-                src="./src/assets/imdb.png"
+                src={imdbImage}
                 alt="imdb logo"
                 className="w-6"
               />
@@ -73,7 +77,7 @@ export default function Header() {
 
             <div className="flex items-center ml-8">
               <img
-                src="./src/assets/tomato.png"
+                src={tomatoImage}
                 alt="rotten tomatoes logo"
                 className="w-4"
               />
@@ -87,7 +91,7 @@ export default function Header() {
           </p>
           <button className="flex items-center bg-movieRed rounded-lg  px-4 md:px-6 py-2 mt-2 md:mt-6">
             <img
-              src="./src/assets/play.png"
+              src={playImage}
               alt="play button"
               className="w-4"
             />
