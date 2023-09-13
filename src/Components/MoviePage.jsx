@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Sidebar from "./Sidebar";
 import axios from "axios";
 
 export default function MoviePage() {
   const { movieId } = useParams();
   const [movieInfo, setMovieInfo] = useState({});
   const [loading, setLoading] = useState(true);
+  const [usCertification, setUsCertification] = useState(""); // State to store US certificatio
 
   const details = {
     method: "GET",
@@ -24,7 +26,19 @@ export default function MoviePage() {
       const response = await axios.request(details);
       setMovieInfo(response.data);
       setLoading(false);
-      console.log(response.data.release_dates.results[45].release_dates);
+      console.log(response.data.release_dates.results);
+      // Find the release date entry for the United States (US)
+      const desiredCountryCode = "US"; // Replace with your desired country code
+      const releaseDateEntry = response.data.release_dates.results.find(
+        (entry) => entry.iso_3166_1 === desiredCountryCode
+      );
+
+      if (releaseDateEntry) {
+        // Access and set the US certification
+        const usCertification =
+          releaseDateEntry.release_dates[0]?.certification;
+        setUsCertification(usCertification);
+      }
     } catch (error) {
       console.error(error);
       setLoading(false);
@@ -52,9 +66,7 @@ export default function MoviePage() {
         <div>Loading...</div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-[20%_80%]  gap-4">
-          <div className=" ">
-            <p>side bar</p>
-          </div>
+          <Sidebar />
           <div className="p-3 md:p-14 2xl:p-10 overflow-x-hidden">
             <div className="relative">
               <img
@@ -92,13 +104,11 @@ export default function MoviePage() {
                   </p>
                   <span className="hidden md:flex ml-3 mr-3">•</span>
 
-                  {movieInfo.release_dates.results[45].release_dates
-                    .slice(0, 1)
-                    .map((rating, i) => (
-                      <div key={i}>
-                        <p className="text-2xl ">{rating.certification}</p>
-                      </div>
-                    ))}
+                  {usCertification ? (
+                    <p className="text-2xl">{usCertification}</p>
+                  ) : (
+                    <p>US Certification not available</p>
+                  )}
                   <span className="hidden md:flex ml-3 mr-3">•</span>
                   <p data-testid="movie-runtime" className="text-2xl">
                     {movieInfo.runtime}
@@ -150,7 +160,6 @@ export default function MoviePage() {
                     .map((writer, i) => (
                       <div key={i}>
                         <p className="text-movieRed text-lg md:ml-2">
-                          {" "}
                           {writer.name}
                         </p>
                       </div>
@@ -179,7 +188,7 @@ export default function MoviePage() {
                   />
                   <p className="ml-3 text-white">See Showtimes</p>
                 </button>
-                <button className="flex items-center justify-center bg-movieRed bg-opacity-25 rounded-lg px-3 py-3 w-full border-movieRed">
+                <button className="flex items-center justify-center bg-movieRed bg-opacity-25 rounded-lg px-3 py-3 w-full border border-movieRed">
                   <img src="/src/assets/list.png" alt="list" className="w-7" />
                   <p className="ml-3 text-black">More watch options</p>
                 </button>

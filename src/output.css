@@ -625,6 +625,14 @@ video {
   margin-top: 1.5rem;
 }
 
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
 .block{
   display: block;
 }
@@ -698,6 +706,10 @@ video {
   width: 1.75rem;
 }
 
+.w-44{
+  width: 11rem;
+}
+
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -750,13 +762,114 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
+.rounded-r{
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-r-lg{
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-l{
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-l-xl{
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-b-xl{
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-t-none{
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.rounded-tr-none{
+  border-top-right-radius: 0px;
+}
+
+.rounded-tr{
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-tr-xl{
+  border-top-right-radius: 0.75rem;
+}
+
+.rounded-bl-xl{
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-br-xl{
+  border-bottom-right-radius: 0.75rem;
+}
+
+.rounded-br-2xl{
+  border-bottom-right-radius: 1rem;
+}
+
+.rounded-tr-2xl{
+  border-top-right-radius: 1rem;
+}
+
+.rounded-br-full{
+  border-bottom-right-radius: 9999px;
+}
+
+.rounded-tr-full{
+  border-top-right-radius: 9999px;
+}
+
+.rounded-br-3xl{
+  border-bottom-right-radius: 1.5rem;
+}
+
 .border{
   border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-r{
+  border-right-width: 1px;
+}
+
+.border-none{
+  border-style: none;
 }
 
 .border-movieRed{
   --tw-border-opacity: 1;
   border-color: rgb(190 18 60 / var(--tw-border-opacity));
+}
+
+.border-gray-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.border-r-red-500{
+  --tw-border-opacity: 1;
+  border-right-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.border-r-movieRed{
+  --tw-border-opacity: 1;
+  border-right-color: rgb(190 18 60 / var(--tw-border-opacity));
 }
 
 .border-opacity-25{
@@ -790,6 +903,14 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
+.bg-opacity-5{
+  --tw-bg-opacity: 0.05;
+}
+
+.bg-opacity-10{
+  --tw-bg-opacity: 0.1;
+}
+
 .bg-mobileHero{
   background-image: url('./src/assets/mobile-poster.png');
 }
@@ -812,6 +933,14 @@ video {
 
 .p-3{
   padding: 0.75rem;
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-2{
@@ -844,6 +973,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -858,6 +992,14 @@ video {
 
 .pt-96{
   padding-top: 24rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pl-3{
+  padding-left: 0.75rem;
 }
 
 .text-center{
@@ -968,6 +1110,11 @@ video {
   transform: translate(-50%, -50%);
 }
 
+.first-line\:text-movieRed::first-line{
+  --tw-text-opacity: 1;
+  color: rgb(190 18 60 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px){
   .md\:ml-2{
     margin-left: 0.5rem;
@@ -991,6 +1138,18 @@ video {
 
   .md\:mt-6{
     margin-top: 1.5rem;
+  }
+
+  .md\:ml-0{
+    margin-left: 0px;
+  }
+
+  .md\:ml-1{
+    margin-left: 0.25rem;
+  }
+
+  .md\:block{
+    display: block;
   }
 
   .md\:flex{
@@ -1025,6 +1184,14 @@ video {
     width: 100%;
   }
 
+  .md\:w-8{
+    width: 2rem;
+  }
+
+  .md\:w-9{
+    width: 2.25rem;
+  }
+
   .md\:grid-cols-5{
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -1035,6 +1202,24 @@ video {
 
   .md\:grid-cols-\[70\%_30\%\]{
     grid-template-columns: 70% 30%;
+  }
+
+  .md\:border{
+    border-width: 1px;
+  }
+
+  .md\:border-r{
+    border-right-width: 1px;
+  }
+
+  .md\:border-red-500{
+    --tw-border-opacity: 1;
+    border-color: rgb(239 68 68 / var(--tw-border-opacity));
+  }
+
+  .md\:border-r-red-500{
+    --tw-border-opacity: 1;
+    border-right-color: rgb(239 68 68 / var(--tw-border-opacity));
   }
 
   .md\:bg-hero{
