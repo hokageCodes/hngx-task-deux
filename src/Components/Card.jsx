@@ -140,16 +140,6 @@ export default function Card() {
     },
   ];
 
-  const formatDateToUTC = (dateString) => {
-    const date = new Date(dateString);
-    const options = {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-      timeZone: "UTC",
-    };
-    return date.toLocaleDateString("en-US", options);
-  };
 
 
   return (
@@ -207,7 +197,7 @@ export default function Card() {
                   className="text-xs text-gray-400 mt-2 font-bold"
                   data-testid="movie-release-date"
                 >
-                  USA, {formatDateToUTC(movie.release_date)}
+                  USA, {movie.release_date}
                 </h4>
                 <h1 className="font-bold mt-2" data-testid="movie-title">
                   {movie.title}
