@@ -199,17 +199,17 @@ export default function MoviePage() {
               <div className="mt-6">
                 <button className="flex items-center justify-center bg-movieRed rounded-lg px-3 py-3 w-full mb-2">
                   <img
-                    src="./src/assets/tickets.png"
+                    src="/assets/tickets.png"
                     alt="ticket"
                     className="w-8"
                   />
                   <p className="ml-3 text-white">See Showtimes</p>
                 </button>
                 <button className="flex items-center justify-center bg-movieRed bg-opacity-25 rounded-lg px-3 py-3 w-full border border-movieRed">
-                  <img src="./src/assets/list.png" alt="list" className="w-7" />
+                  <img src="/assets/list.png" alt="list" className="w-7" />
                   <p className="ml-3 text-black">More watch options</p>
                                   </button>
-                                  <img src="./src/assets/group52.png" alt="" className="mt-4 w-full"/>
+                                  <img src="/assets/group52.png" alt="" className="mt-4 w-full"/>
                               </div>
                               
             </div>
