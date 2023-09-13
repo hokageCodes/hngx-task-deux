@@ -21,7 +21,7 @@ export default function Header() {
             <h1 className="text-sm">Sign In</h1>
             <button>
               <img
-                src="/images/red-menu.png"
+                src="./src/assets/red-menu.png"
                 alt="menu"
                 className="w-6 md:w-10 ml-4"
               />
