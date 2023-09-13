@@ -66,7 +66,7 @@ export default function Search() {
         <div className="absolute top-2 right-3">
           <button onClick={getSearch}>
             <img
-              src="./src/assets/search-icon.png"
+              src="./assets/search-icon.png"
               alt="search icon"
               className="w-4"
             />
@@ -74,7 +74,7 @@ export default function Search() {
         </div>
 
         <img
-          src="./src/assets/search-icon.png"
+          src="./assets/search-icon.png"
           alt="search icon"
           className="w-4 flex md:hidden"
           onClick={getSearch}
