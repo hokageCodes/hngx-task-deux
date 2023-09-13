@@ -2,19 +2,19 @@ export default function Footer() {
   return (
     <div className="pt-20 text-center">
       <div className="flex justify-center items-center">
-        <img src="../assets/facebook.png" alt="facebook logo" />
+        <img src="./src/assets/facebook.png" alt="facebook logo" />
         <img
-          src="../assets/instagram.png"
+          src="./src/assets/instagram.png"
           alt="instagram logo"
           className="ml-2"
         />
         <img
-          src="../assets/twitter.png"
+          src="./src/assets/twitter.png"
           alt="twitter logo"
           className="ml-2"
         />
         <img
-          src="../assets/youtube.png"
+          src="./src/assets/youtube.png"
           alt="youtube logo"
           className="ml-2"
         />
