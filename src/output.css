@@ -569,6 +569,11 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -623,6 +628,10 @@ video {
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
 }
 
 .block{
@@ -866,6 +875,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .pt-10{
   padding-top: 2.5rem;
 }
@@ -950,6 +964,10 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .placeholder-white::-moz-placeholder{

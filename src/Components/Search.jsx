@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 export default function Search() {
   const [hasError, setHasError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate(); // Import the useNavigate hook
 
   const options = {
     method: "GET",
@@ -92,8 +93,7 @@ export default function Search() {
               <ul>
                 {searchResults.map((result) => (
                   <li key={result.id}>
-                    <Link to={`/search-results?query=${result.title}`}>
-                      {" "}
+                    <Link to={`/search-results?movieId=${result.id}`}>
                       {/* Pass search results as a query parameter */}
                       {result.title}
                     </Link>
