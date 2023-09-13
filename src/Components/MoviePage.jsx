@@ -82,7 +82,7 @@ export default function MoviePage() {
               />
               <div className="centered">
                 <img
-                  src="/src/assets/white-play.png"
+                  src="/assets/white-play.png"
                   alt="play button"
                   className=" w-20 md:w-full bg-gray-400 bg-opacity-25 rounded-full p-3"
                 />
