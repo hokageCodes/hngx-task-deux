@@ -13,7 +13,7 @@ export default function Card() {
   const options = {
     method: "GET",
     url: "https://api.themoviedb.org/3/movie/top_rated",
-    params: { language: "en-US" },
+    params: { language: "en-US", region: "US" },
     headers: {
       accept: "application/json",
       Authorization:
@@ -140,6 +140,18 @@ export default function Card() {
     },
   ];
 
+  const formatDateToUTC = (dateString) => {
+    const date = new Date(dateString);
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC",
+    };
+    return date.toLocaleDateString("en-US", options);
+  };
+
+
   return (
     <>
       {loading ? (
@@ -166,19 +178,16 @@ export default function Card() {
         {movieData &&
           movieData.slice(0, 10).map((movie, index) => (
             <div key={index}>
-              
               <div className="card" data-testid="movie-card">
                 <div className="relative">
                   <Link to={`/movie/${movie.id}`}>
-                    
-                  
-                  <img
-                    src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                    alt="Movie Poster"
-                    className="w-full"
-                    data-testid="movie-poster"
-                  />
-              </Link>
+                    <img
+                      src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      alt="Movie Poster"
+                      className="w-full"
+                      data-testid="movie-poster"
+                    />
+                  </Link>
                   <div className="absolute right-0 top-0 p-2">
                     <button onClick={() => toggleLike(index)}>
                       <img
@@ -191,15 +200,14 @@ export default function Card() {
                         className="w-6 bg-favorite bg-opacity-50 rounded-full p-1 z-20"
                       />
                     </button>
-                    </div>
-                   
+                  </div>
                 </div>
 
                 <h4
                   className="text-xs text-gray-400 mt-2 font-bold"
                   data-testid="movie-release-date"
                 >
-                  USA, {movie.release_date}
+                  USA, {formatDateToUTC(movie.release_date)}
                 </h4>
                 <h1 className="font-bold mt-2" data-testid="movie-title">
                   {movie.title}

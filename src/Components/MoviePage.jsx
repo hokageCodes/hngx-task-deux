@@ -9,7 +9,7 @@ export default function MoviePage() {
 
   const details = {
     method: "GET",
-    url: `https://api.themoviedb.org/3/movie/${movieId}?append_to_response=credits`,
+    url: `https://api.themoviedb.org/3/movie/${movieId}?append_to_response=credits,release_dates`,
     params: { language: "en-US" },
     headers: {
       accept: "application/json",
@@ -35,9 +35,17 @@ export default function MoviePage() {
     movieDetails();
   }, [movieId]);
 
-  //     const filteredCast = movieInfo.filter(
-  //       (item) => item.type === "Writing"
-  //   )
+ const formatDateToUTC = (dateString) => {
+   const date = new Date(dateString);
+   const options = {
+     year: "numeric",
+     month: "long",
+     day: "numeric",
+     timeZone: "UTC",
+   };
+   return date.toLocaleDateString("en-US", options);
+ };
+
 
   return (
     <div>
@@ -81,7 +89,7 @@ export default function MoviePage() {
                     data-testid="movie-release-date"
                     className="md:ml-5 text-2xl"
                   >
-                    {movieInfo.release_date}
+                    {formatDateToUTC(movieInfo.release_date)}
                   </p>
                   <span className="hidden md:flex ml-3 mr-3">•</span>
                   <p data-testid="movie-runtime" className="text-2xl">
@@ -117,7 +125,10 @@ export default function MoviePage() {
                       .slice(0, 1),
                   ].map((directors, i) => (
                     <div key={i}>
-                      <p className="md:ml-2 text-movieRed text-lg"> {directors}</p>
+                      <p className="md:ml-2 text-movieRed text-lg">
+                        {" "}
+                        {directors}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -130,18 +141,23 @@ export default function MoviePage() {
                     .slice(0, 1)
                     .map((writer, i) => (
                       <div key={i}>
-                        <p className="text-movieRed text-lg md:ml-2"> {writer.name}</p>
+                        <p className="text-movieRed text-lg md:ml-2">
+                          {" "}
+                          {writer.name}
+                        </p>
                       </div>
                     ))}
                 </div>
-                                  <div className="block md:flex items-center mt-2">
-                                      <div>
-                                          <h1 className="text-xl">Stars:</h1> 
-                                      </div>
-                 
+                <div className="block md:flex items-center mt-2">
+                  <div>
+                    <h1 className="text-xl">Stars:</h1>
+                  </div>
+
                   {movieInfo.credits.cast.slice(0, 3).map((credit, index) => (
                     <div key={index}>
-                      <p className="md:ml-2 text-lg text-movieRed">{credit.name}</p>
+                      <p className="md:ml-2 text-lg text-movieRed">
+                        {credit.name}
+                      </p>
                     </div>
                   ))}
                 </div>
