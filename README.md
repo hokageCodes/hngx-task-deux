@@ -41,7 +41,7 @@ Implement error handling to display meaningful error messages to users in case o
 
 ### View Live Project
 
-- You can view the live project [HERE]("https://ameley-hng-stage-two.netlify.app/")
+- You can view the live project [HERE](https://ameley-hng-stage-two.netlify.app/)
 
 ### Notes About The Project:
 - IMPORTANT: Pages may automatically jump to the bottom. Please scroll up to view the page content
