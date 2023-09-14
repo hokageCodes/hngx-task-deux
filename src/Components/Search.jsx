@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Search() {
   const [hasError, setHasError] = useState(false);
@@ -80,30 +80,31 @@ export default function Search() {
           onClick={getSearch}
         />
       </div>
-
-      {loading ? (
-        <div>Loading...</div>
-      ) : hasError ? (
-        <div>Oops! An Error Has Occurred...</div>
-      ) : (
-        <div className="z-20 p-3">
-          {searchResults.length > 0 && (
-            <div>
-              <h2>Search Results:</h2>
-              <ul>
-                {searchResults.map((result) => (
-                  <li key={result.id}>
-                    <Link to={`/search-results?movieId=${result.id}`}>
-                      {/* Pass search results as a query parameter */}
-                      {result.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
+      <div className="absolute mt-2 w-[500px] bg-transparent  p-2 space-y-2 hidden md:block">
+        {loading ? (
+          <div>Loading...</div>
+        ) : hasError ? (
+          <div>Oops! An Error Has Occurred...</div>
+        ) : (
+          <div className="z-20 p-3">
+            {searchResults.length > 0 && (
+              <div>
+                <h2>Search Results:</h2>
+                <ul>
+                  {searchResults.map((result) => (
+                    <li key={result.id}>
+                      <Link to={`/search-results?movieId=${result.id}`}>
+                        {/* Pass search results as a query parameter */}
+                        {result.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
