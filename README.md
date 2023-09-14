@@ -39,8 +39,21 @@ overview - [data-testid: movie-overview]
 ### Error Handling:
 Implement error handling to display meaningful error messages to users in case of API failures or other issues.
 
+### View Live Project
+
+- You can view the live project [HERE]("https://ameley-hng-stage-two.netlify.app/")
+
 ### Notes About The Project:
+- IMPORTANT: Pages may automatically jump to the bottom. Please scroll up to view the page content
 - The API call will bring back the top-rated movies of all time
 - Users are able to click on the poster cards to get individual information about the movie
 - The search functionality works in the desktop version only as a mobile design was not specified
 - Users will need to click on the movie title name in the search drop-down to be taken to that individual movie page
+
+
+### Tools & Frameworks Used:
+
+- Build: ReactJS
+- CSS: TailwindCSS
+- API: TMDB
+- Hosting: Netlify
