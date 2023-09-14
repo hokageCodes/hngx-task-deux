@@ -86,7 +86,7 @@ export default function Search() {
       ) : hasError ? (
         <div>Oops! An Error Has Occurred...</div>
       ) : (
-        <div>
+        <div className="z-20 p-3">
           {searchResults.length > 0 && (
             <div>
               <h2>Search Results:</h2>
