@@ -31,8 +31,6 @@ overview - [data-testid: movie-overview]
 
 
 ### API Integration:
-
-
 - Consume the TMDB API to fetch movie data.
 - Use the following API endpoints:
 - Fetch movie details by ID: https://api.themoviedb.org/3/movie/{movie_id}
@@ -40,3 +38,9 @@ overview - [data-testid: movie-overview]
 
 ### Error Handling:
 Implement error handling to display meaningful error messages to users in case of API failures or other issues.
+
+### Notes About The Project:
+- The API call will bring back the top-rated movies of all time
+- Users are able to click on the poster cards to get individual information about the movie
+- The search functionality works in the desktop version only as a mobile design was not specified
+- Users will need to click on the movie title name in the search drop-down to be taken to that individual movie page
