@@ -43,6 +43,13 @@ Implement error handling to display meaningful error messages to users in case o
 
 - You can view the live project [HERE](https://ameley-hng-stage-two.netlify.app/)
 
+### How To Run Project Locally
+- After cloning down:
+- Open the Integrated Terminal on 'STAGE-TWO'
+- Type in "npm i" in the terminal to ensure all the dependencies are installed
+- Type in "npm run dev" in the terminal to spin up the file on local host. It will spin up to local host 3000
+  
+
 ### Notes About The Project:
 - IMPORTANT: Pages may automatically jump to the bottom. Please scroll up to view the page content
 - The API call will bring back the top-rated movies of all time
