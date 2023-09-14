@@ -61,6 +61,10 @@ export default function MoviePage() {
       year: "numeric",
       month: "long",
       day: "numeric",
+      hour: "2-digit",
+      minutes: "2-digit",
+      seconds: "2-digit",
+      milliseconds: "2-digit",
       timeZone: "UTC",
     };
     return date.toLocaleDateString("en-US", options);
