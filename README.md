@@ -41,7 +41,7 @@ Implement error handling to display meaningful error messages to users in case o
 
 ### View Live Project
 
-- You can view the live project [HERE](https://ameley-hng-stage-two.netlify.app/)
+- You can view the live project [HERE](https://hngx-task-deux.vercel.app/)
 
 ### How To Run Project Locally
 - After cloning down:
@@ -63,4 +63,4 @@ Implement error handling to display meaningful error messages to users in case o
 - Build: ReactJS
 - CSS: TailwindCSS
 - API: TMDB
-- Hosting: Netlify
+- Hosting: Vercel
