@@ -56,7 +56,7 @@ export default function Header() {
 
         {/* ---------- HERO TEXT  ------------------ */}
         <div className=" w-56 md:w-96 p-2 md:p-5 text-white  md:mt-20 ">
-          <h1 className=" text-3xl md:text-5xl font-semibold ">
+          <h1 className=" ml-[500px] text-3xl md:text-5xl font-semibold ">
             John Wick 3: Parabellum
           </h1>
 

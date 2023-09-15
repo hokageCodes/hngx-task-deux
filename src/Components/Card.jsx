@@ -17,7 +17,7 @@ export default function Card() {
     headers: {
       accept: "application/json",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYzcyZWUwZDRlYzAyZWVmNDNkY2UzNjBmN2I4NDllYyIsInN1YiI6IjY0ZmVmYmVkNmEyMjI3MDBjM2I1NTA4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IX4vZfe67rCcFewb07NpXRc7CVIE8o56Oj8xnQAm1nA",
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYzhjNTA2YzI5NzJjNGQxODg0MTI1MmI5Yjc0OWZhNCIsInN1YiI6IjY0OGUxMmYzMmY4ZDA5MDBlMzg1NjQyMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M8Wn9BI1Tjrwu9DnEQoFfceOggWszXEt2fxKGas2jQI",
     },
   };
 
@@ -109,6 +109,18 @@ export default function Card() {
           name: "Music",
         },
         {
+          id: 53,
+          name: "Thriller",
+        },
+        {
+          id: 10752,
+          name: "War",
+        },
+        {
+          id: 37,
+          name: "Western",
+        },
+        {
           id: 9648,
           name: "Mystery",
         },
@@ -123,18 +135,6 @@ export default function Card() {
         {
           id: 10770,
           name: "TV Movie",
-        },
-        {
-          id: 53,
-          name: "Thriller",
-        },
-        {
-          id: 10752,
-          name: "War",
-        },
-        {
-          id: 37,
-          name: "Western",
         },
       ],
     },
@@ -183,7 +183,7 @@ export default function Card() {
                       <img
                         src={
                           likedMovies.includes(index)
-                            ? "/assets/red-fave.png"
+                            ? "/assets/favourite.png"
                             : "/assets/fave.png"
                         }
                         alt="like icon"

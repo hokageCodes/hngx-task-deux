@@ -9,10 +9,6 @@ function App() {
 
   return (
     <div className="font-dmSans">
-
-     
-        
-   
       <div className="">
           <div className="">
           

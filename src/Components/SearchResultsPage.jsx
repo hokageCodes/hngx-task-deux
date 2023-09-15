@@ -24,7 +24,7 @@ export default function SearchResultsPage() {
               headers: {
                 accept: "application/json",
                 Authorization:
-                  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYzcyZWUwZDRlYzAyZWVmNDNkY2UzNjBmN2I4NDllYyIsInN1YiI6IjY0ZmVmYmVkNmEyMjI3MDBjM2I1NTA4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IX4vZfe67rCcFewb07NpXRc7CVIE8o56Oj8xnQAm1nA",
+                  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYzhjNTA2YzI5NzJjNGQxODg0MTI1MmI5Yjc0OWZhNCIsInN1YiI6IjY0OGUxMmYzMmY4ZDA5MDBlMzg1NjQyMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M8Wn9BI1Tjrwu9DnEQoFfceOggWszXEt2fxKGas2jQI",
               },
             }
           );

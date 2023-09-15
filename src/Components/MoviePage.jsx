@@ -1,23 +1,25 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import axios from "axios";
 
 export default function MoviePage() {
-  const { movieId } = useParams();
   const [movieInfo, setMovieInfo] = useState({});
   const [loading, setLoading] = useState(true);
-    const [usCertification, setUsCertification] = useState("");
-    const [formattedRuntime, setFormattedRuntime] = useState("");
+  const [usCertification, setUsCertification] = useState("");
+  const [formattedRuntime, setFormattedRuntime] = useState("");
+
+  const getRandomMovieId = () => {
+    // Generate a random movie id between 1 and 100000 (adjust as needed).
+    return Math.floor(Math.random() * 100000) + 1;
+  };
 
   const details = {
     method: "GET",
-    url: `https://api.themoviedb.org/3/movie/${movieId}?append_to_response=credits,release_dates`,
+    url: `https://api.themoviedb.org/3/movie/${getRandomMovieId()}?append_to_response=credits,release_dates`,
     params: { language: "en-US" },
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYzcyZWUwZDRlYzAyZWVmNDNkY2UzNjBmN2I4NDllYyIsInN1YiI6IjY0ZmVmYmVkNmEyMjI3MDBjM2I1NTA4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IX4vZfe67rCcFewb07NpXRc7CVIE8o56Oj8xnQAm1nA",
+      Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYzhjNTA2YzI5NzJjNGQxODg0MTI1MmI5Yjc0OWZhNCIsInN1YiI6IjY0OGUxMmYzMmY4ZDA5MDBlMzg1NjQyMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.M8Wn9BI1Tjrwu9DnEQoFfceOggWszXEt2fxKGas2jQI",
     },
   };
 
@@ -27,24 +29,21 @@ export default function MoviePage() {
       const response = await axios.request(details);
       setMovieInfo(response.data);
       setLoading(false);
-    
-     
-      const desiredCountryCode = "US"; 
+
+      const desiredCountryCode = "US";
       const releaseDateEntry = response.data.release_dates.results.find(
         (entry) => entry.iso_3166_1 === desiredCountryCode
       );
 
       if (releaseDateEntry) {
-   
-        const usCertification =
-          releaseDateEntry.release_dates[0]?.certification;
+        const usCertification = releaseDateEntry.release_dates[0]?.certification;
         setUsCertification(usCertification);
       }
-        
-         const runtimeInMinutes = response.data.runtime;
-         const hours = Math.floor(runtimeInMinutes / 60);
-         const minutes = runtimeInMinutes % 60;
-         setFormattedRuntime(`${hours}h ${minutes}min`);
+
+      const runtimeInMinutes = response.data.runtime;
+      const hours = Math.floor(runtimeInMinutes / 60);
+      const minutes = runtimeInMinutes % 60;
+      setFormattedRuntime(`${hours}h ${minutes}min`);
     } catch (error) {
       console.error(error);
       setLoading(false);
@@ -53,7 +52,7 @@ export default function MoviePage() {
 
   useEffect(() => {
     movieDetails();
-  }, [movieId]);
+  }, []);
 
   const formatDateToUTC = (dateString) => {
     const date = new Date(dateString);
@@ -69,7 +68,6 @@ export default function MoviePage() {
     };
     return date.toLocaleDateString("en-US", options);
   };
-
   return (
     <div>
       {loading ? (
