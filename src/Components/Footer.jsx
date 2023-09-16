@@ -25,7 +25,7 @@ export default function Footer() {
         <h5 className="ml-5">Press Room</h5>
       </div>
 
-      <p className="mt-5 text-gray-400">&copy; 2023 MovieBox by Ameley Kwei-Armah</p>
+      <p className="mt-5 text-gray-400">&copy; 2023 MovieBox by hokageCodes</p>
     </div>
   );
 }
